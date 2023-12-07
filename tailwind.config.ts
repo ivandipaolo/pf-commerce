@@ -14,7 +14,11 @@ const config: Config = {
           primary: "#000000",
           secondary: "#191919",
         },
-        background: "#2F333A",
+        background: {
+          primary: "#FFFFFF",
+          secondary: "#2F333A",
+          tertiary: "#F4F5F8"
+        },
       },
     },
   },
