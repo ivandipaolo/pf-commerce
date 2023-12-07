@@ -10,7 +10,7 @@ export const PriceCard = ({ product }: Props) => {
   return (
     <div className="shadow-md">
       {/* Todo: Add shadow to the top too */}
-      <MaxWidthWrapper className="py-2 flex flex-col gap-1">
+      <MaxWidthWrapper className="py-3 flex flex-col gap-1">
         <p className="font-light text-2xs">USD(incl. of all taxes):</p>
         <div className="font-medium flex flex-row gap-2 text-center items-center">
           <h1 className="text-lg">{formatPrice(product.price)}</h1>

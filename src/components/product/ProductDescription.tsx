@@ -24,7 +24,7 @@ const ProductDescription = ({ product }: Props) => {
     }
   }
   return (
-    <MaxWidthWrapper className="flex flex-col gap-1 pt-5">
+    <MaxWidthWrapper className="flex flex-col gap-1 py-5">
       <div className="text-text-secondary font-normal text-2xs">
         <p>
           Brand: <span className="font-light">{brand}</span>

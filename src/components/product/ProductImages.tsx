@@ -14,7 +14,6 @@ type Props = {
 const ProductImages = ({ product: { model, images, subtitle } }: Props) => {
   const [selectedImage, setSelectedImage] = useState<string>(images[0])
 
-  console.log(`/images/products/${model}/${images[0]}`)
   return (
     <MaxWidthWrapper>
       <div className="w-full h-fit">
