@@ -1,5 +1,6 @@
-import { cn } from "@/lib"
 import { ReactNode } from "react"
+
+import { cn } from "@/lib"
 
 export const MaxWidthWrapper = ({
   className,
@@ -11,7 +12,7 @@ export const MaxWidthWrapper = ({
   return (
     <div
       className={cn(
-        "px-6 lg:px-60",
+        "px-7 lg:px-60",
         className
       )}
     >

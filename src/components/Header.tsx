@@ -1,4 +1,5 @@
 import Image from "next/image"
+
 import { MaxWidthWrapper } from "@/components"
 
 export const Header = () => {
@@ -41,6 +42,7 @@ export const Header = () => {
             height={40}
             className="w-5"
           />
+          {/* Todo: adjust icons sizes */}
         </div>
         <div className="relative p-1">
           <div className="rounded-full bg-primary absolute right-0 top-0 flex justify-center items-center text-center content-center">
