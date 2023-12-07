@@ -4,10 +4,10 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
+import { Dispatch, SetStateAction } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from "swiper/modules"
 import Image from "next/image"
-import { Dispatch, SetStateAction } from "react"
 
 import { cn } from "@/lib"
 
@@ -66,8 +66,8 @@ const ImageRow = ({
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-button-next bg-primary text-sm text-white p-3.5"></div>
-      <div className="swiper-button-prev bg-primary text-sm text-white p-3.5"></div>
+      <div className="swiper-button-next bg-primary text-sm text-white p-2.5"></div>
+      <div className="swiper-button-prev bg-primary text-sm text-white p-2.5"></div>
     </>
   )
 }

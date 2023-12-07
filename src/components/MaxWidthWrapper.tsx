@@ -12,7 +12,7 @@ export const MaxWidthWrapper = ({
   return (
     <div
       className={cn(
-        "px-6 lg:px-60",
+        "px-7 lg:px-60",
         className
       )}
     >

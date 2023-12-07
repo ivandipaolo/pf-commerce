@@ -8,6 +8,9 @@ export type Product = {
   title: string
   subtitle: string
   category: string
+  subCategory: string
   characteristics: string[]
   description: string
+  specifications: string
+  reviews: string
 }
