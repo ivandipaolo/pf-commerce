@@ -1,6 +1,7 @@
 export { default as ProductImages } from "./ProductImages"
 export { default as ProductDescription } from "./ProductDescription"
-export { default as ImageRow } from "./ImageRow"
+export { default as HorizontalImages } from "./HorizontalImages"
+export { default as VerticalImages } from "./VerticalImages"
 export { default as ProductDetails } from "./ProductDetails"
 export { default as RelatedProducts } from "./RelatedProducts"
 export { default as ProductCard } from "./ProductCard"

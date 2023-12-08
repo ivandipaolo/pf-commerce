@@ -6,70 +6,64 @@ import "swiper/css/pagination"
 
 import { Dispatch, SetStateAction } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination } from "swiper/modules"
+import { Pagination } from "swiper/modules"
 import Image from "next/image"
 
 import { cn } from "@/lib"
 
-const ImageRow = ({
-  srcList = [
-    "/images/products/OLED42C2PSA/1.png",
-    "/images/products/OLED42C2PSA/2.png",
-    "/images/products/OLED42C2PSA/3.png",
-    "/images/products/OLED42C2PSA/4.png",
-  ],
-  setSelectedImage,
-  productModel,
-  selectedImage,
-}: {
+type Props = {
   srcList: string[]
   setSelectedImage: Dispatch<SetStateAction<string>>
   productModel: string
   selectedImage: string
-}) => {
+  className: string
+}
+
+const VerticalImages = ({
+  srcList,
+  setSelectedImage,
+  productModel,
+  selectedImage,
+  className,
+}: Props) => {
   return (
-    <>
+    <div className={cn(className)}>
       <Swiper
+        direction="vertical"
         slidesPerView={3}
         spaceBetween={10}
         width={265}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
         pagination={{
           clickable: true,
           bulletClass: "hidden",
         }}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination]}
       >
         {srcList.map((src, index) => (
           <SwiperSlide
             key={index}
             className={cn(
-              "py-4 bg-white border  border-gray-200 flex justify-center items-center",
+              "py-4 bg-white border  border-gray-200 flex justify-center items-center max-h-[120px]",
               selectedImage === src && "border-primary"
             )}
           >
             <div
-              className="flex relative justify-center items-center w-full h-full"
+              className="flex relative justify-center items-center  h-full"
               onClick={() => setSelectedImage(src)}
             >
               <Image
                 src={`/images/products/${productModel}/${src}`}
                 alt="product"
-                width={70}
-                height={70}
-                className="block min-h-[50px] max-h-[50px] object-contain"
+                width={120}
+                height={120}
+                className="block min-h-[80px] max-h-[80px] object-contain"
               />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-button-next bg-primary text-sm text-white p-2.5"></div>
-      <div className="swiper-button-prev bg-primary text-sm text-white p-2.5"></div>
-    </>
+    </div>
   )
 }
 
-export default ImageRow
+export default VerticalImages
