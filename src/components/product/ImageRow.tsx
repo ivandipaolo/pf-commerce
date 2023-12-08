@@ -60,7 +60,7 @@ const ImageRow = ({
                 alt="product"
                 width={70}
                 height={70}
-                className="block"
+                className="block min-h-[50px] max-h-[50px] object-contain"
               />
             </div>
           </SwiperSlide>

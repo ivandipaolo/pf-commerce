@@ -21,6 +21,7 @@ const config: Config = {
           secondary: "#2F333A",
           tertiary: "#F4F5F8",
           extra: "#F1F1F1",
+          subscribed: '#191919'
         },
         dividor: "#D9D9D9",
         tags: {

@@ -24,25 +24,24 @@ export const Header = () => {
           <Image
             src="/images/icons/search.svg"
             alt="search"
-            width={40}
-            height={40}
+            width={45}
+            height={45}
             className="w-5"
           />
           <Image
             src="/images/icons/user.svg"
             alt="user"
-            width={40}
-            height={40}
+            width={45}
+            height={45}
             className="w-5"
           />
           <Image
             src="/images/icons/likes.svg"
             alt="likes"
-            width={40}
-            height={40}
+            width={45}
+            height={45}
             className="w-5"
           />
-          {/* Todo: adjust icons sizes */}
         </div>
         <div className="relative p-1">
           <div className="rounded-full bg-primary absolute right-0 top-0 flex justify-center items-center text-center content-center">

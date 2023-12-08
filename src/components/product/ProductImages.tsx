@@ -16,12 +16,13 @@ const ProductImages = ({ product: { model, images, subtitle } }: Props) => {
 
   return (
     <MaxWidthWrapper>
-      <div className="w-full h-fit">
+      <div className="w-full">
         <Image
           src={`/images/products/${model}/${selectedImage}`}
           alt={model}
           width={1920}
           height={1080}
+          className="max-h-[250px] min-h-[250px] object-contain"
         />
         <p className="text-center text-text-tertiary text-2xs text-opacity-90 py-3">*{subtitle}</p>
         <div className="px-10 relative">
