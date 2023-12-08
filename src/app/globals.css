@@ -21,8 +21,14 @@
   @apply bg-primary;
   --swiper-navigation-sides-offset: 0px;
   --swiper-navigation-size: 8px;
-  --swiper-navigation-top-offset: 40%;
+  --swiper-navigation-top-offset: 35%;
   --swiper-navigation-color: #fff;
+}
+@screen lg {
+  .swiper-button-next,
+  .swiper-button-prev {
+    --swiper-navigation-top-offset: 42.5%;
+  }
 }
 
 @keyframes expandUnderline {

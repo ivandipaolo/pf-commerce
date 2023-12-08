@@ -1,5 +1,7 @@
 export type Product = {
+  id: number
   model: string
+  oldPrice: number
   price: number
   images: string[]
   rating: number
@@ -13,4 +15,8 @@ export type Product = {
   description: string
   specifications: string
   reviews: string
+  discount: number
+  createdAt: Date
+  abbreviation: string
+  warranty: number
 }

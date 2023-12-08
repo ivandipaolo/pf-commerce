@@ -41,7 +41,7 @@ const ProductDetails = ({ product }: Props) => {
             Reviews
           </button>
         </div>
-        <p className="font-light text-2xs">
+        <div className="font-light text-2xs">
           {selectedView === "description" && (
             <div className="py-3">
               <div className="text-sm">
@@ -65,7 +65,7 @@ const ProductDetails = ({ product }: Props) => {
               </div>
             </div>
           )}
-        </p>
+        </div>
       </MaxWidthWrapper>
     </div>
   )
