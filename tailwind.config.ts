@@ -14,6 +14,7 @@ const config: Config = {
           primary: "#000000",
           secondary: "#191919",
           tertiary: "#6F6F6F",
+          search: "#969696",
           extra: "#D7D7D7",
         },
         background: {
@@ -21,7 +22,7 @@ const config: Config = {
           secondary: "#2F333A",
           tertiary: "#F4F5F8",
           extra: "#F1F1F1",
-          subscribed: '#191919'
+          subscribed: "#191919",
         },
         dividor: "#D9D9D9",
         tags: {
@@ -30,11 +31,18 @@ const config: Config = {
           orange: "#FF9900",
           green: "#12A05C",
         },
+        border: {
+          primary: '#FDFDFD',
+          secondary: '#F0F0F0'
+        }
       },
       fontSize: {
         "2xs": "0.625rem",
         "3xs": "0.5rem",
         "4xs": "0.375rem",
+      },
+      fontFamily: {
+        inconsolata: ["Inconsolata", "monospace", "inter"],
       },
     },
   },

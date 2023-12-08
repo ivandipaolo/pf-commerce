@@ -1,10 +1,18 @@
-import { Footer, Header, Newsletter } from "@/components"
+import {
+  Footer,
+  ResponsiveHeader,
+  Newsletter,
+  Heading,
+  DesktopHeader,
+} from "@/components"
 import ProductPage from "@/components/ProductPage"
 
 export default function Home() {
   return (
     <main>
-      <Header />
+      <Heading />
+      <ResponsiveHeader />
+      <DesktopHeader />
       <ProductPage />
       <Newsletter />
       <Footer />
