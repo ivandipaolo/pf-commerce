@@ -1,25 +1,47 @@
-'use client'
+"use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
+
+import { useOnClickOutside } from "@/hooks"
+import { cn } from "@/lib"
 
 type Props = {
   className?: string
   title: string
   options: string[]
-  placeholder?: string
+  titleClassName?: string
+  optionsClassName?: string
 }
 
-const DropdownMenu = ({ className, title, options, placeholder }: Props) => {
+const DropdownMenu = ({
+  className,
+  title,
+  options,
+  titleClassName,
+  optionsClassName,
+}: Props) => {
   const [isOpen, setOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null) // Create a ref
+
+  const closeDropdown = () => setOpen(false)
+
+  useOnClickOutside(dropdownRef, () => closeDropdown())
 
   const toggleDropdown = () => setOpen(!isOpen)
 
   return (
-    <div className={className} style={{ position: 'relative' }}>
+    <div
+      className={className}
+      style={{ position: "relative" }}
+      ref={dropdownRef}
+    >
       <button
         id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
-        className="text-text-secondary bg-transparent font-light rounded-lg text-2xl px-5 py-2.5 text-center inline-flex items-center"
+        className={cn(
+          "text-text-secondary bg-transparent font-light rounded-lg text-2xl px-5 py-2.5 text-center inline-flex items-center",
+          titleClassName
+        )}
         type="button"
         onClick={toggleDropdown}
       >
@@ -44,18 +66,19 @@ const DropdownMenu = ({ className, title, options, placeholder }: Props) => {
         <div
           id="dropdown"
           className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-          style={{ position: 'absolute', top: '100%', left: 0 }}
+          style={{ position: "absolute", top: "100%", left: 0 }}
         >
           <ul
-            className="py-2 text-sm text-gray-700 "
+            className="py-3 text-sm text-gray-700 flex flex-col gap-2 text-start"
             aria-labelledby="dropdownDefaultButton"
           >
             {options.map((option, index) => (
               <li key={index}>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 "
-                  onClick={() => console.log(`${option} clicked`)} // Replace with your onClick handler
+                  className={
+                    (cn("block px-4 py-2 hover:bg-gray-100 "), optionsClassName)
+                  }
                 >
                   {option}
                 </a>

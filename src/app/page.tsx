@@ -4,6 +4,7 @@ import {
   Newsletter,
   Heading,
   DesktopHeader,
+  Navbar,
 } from "@/components"
 import ProductPage from "@/components/ProductPage"
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Heading />
       <ResponsiveHeader />
       <DesktopHeader />
+      <Navbar />
       <ProductPage />
       <Newsletter />
       <Footer />

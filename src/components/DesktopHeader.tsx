@@ -16,7 +16,7 @@ export const DesktopHeader = () => {
           <input
             type="text"
             placeholder="Search Products"
-            className="border border-border-primary text-text-search text-xl p-3 text-opacity-50"
+            className="border border-border-primary text-text-search text-xl p-3 text-opacity-50 !outline-none"
           />
           <Image
             src="/images/icons/search.svg"
@@ -29,7 +29,7 @@ export const DesktopHeader = () => {
         </div>
         <div className="  text-text-secondary text-xl flex flex-row justify-between items-center text-center p-1 px-6 w-full">
           <DropdownMenu
-            options={["Option 1", "Option 2", "Option 3", "Option 4"]}
+            options={["Category 1", "Category 2", "Category 3", "Category 4", "Category 5"]}
             title="All Categories"
           />
           <div className="flex flex-row gap-2">
