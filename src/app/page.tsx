@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <Header />
       <ProductPage />
-      {/* <Newsletter /> */}
+      <Newsletter />
       <Footer />
     </main>
   )

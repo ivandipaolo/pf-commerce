@@ -1,12 +1,26 @@
+"use client"
+
 import Image from "next/image"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import { MaxWidthWrapper } from "."
+import { cn } from "@/lib"
 
-export const Newsletter = () => {
+const Newsletter = () => {
+  const [email, setEmail] = useState<string>("")
+  const [isSubscribed, setIsSubscribed] = useState<boolean>(false)
+
+  useEffect(() => {
+    if (isSubscribed) {
+      setTimeout(() => {
+        setIsSubscribed(false)
+      }, 3000)
+    }
+  }, [isSubscribed])
+
   return (
     <div className="relative">
-      <MaxWidthWrapper className=" h-36">
+      <MaxWidthWrapper className="h-44 mr-4">
         <div className="z-30 relative flex justify-center flex-col content-center h-full">
           <h2 className="font-semibold text-white text-lg">
             Join our newsletter and get offers
@@ -14,13 +28,28 @@ export const Newsletter = () => {
           <h3 className="font-normal text-sm text-white">
             Sign up our newsletter
           </h3>
-          <div className="flex flex-row w-full">
+          <div className="flex flex-row w-full my-2">
             <input
               type="text"
               placeholder="Enter your email"
-              className="basis-2/3"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="basis-2/3 px-4 text-text-tertiary text-2xs font-normal !outline-none "
             />
-            <button className="basis-1/3">Subscribe</button>
+            <button
+              onClick={() => {
+                setIsSubscribed(true)
+                setEmail("")
+              }}
+              disabled={email === ""}
+              className={cn(
+                " text-white border font-medium text-xs px-6 py-3 h-full basis-1/3 max-w-[8rem] min-w-[8rem]",
+                isSubscribed ? "bg-background-subscribed" : "bg-primary",
+                (email === "" && !isSubscribed)&& "grayscale grayscale-20 cursor-not-allowed"
+              )}
+            >
+              {isSubscribed ? "SUBSCRIBED!" : "SUBSCRIBE"}
+            </button>
           </div>
         </div>
       </MaxWidthWrapper>
@@ -34,3 +63,5 @@ export const Newsletter = () => {
     </div>
   )
 }
+
+export default Newsletter

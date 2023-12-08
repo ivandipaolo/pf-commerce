@@ -1,8 +1,10 @@
 import Image from "next/image"
 import React from "react"
+import { useStore } from "zustand"
 
 import { Product } from "@/types"
 import { formatPrice } from "@/lib"
+import useProducts from "@/hooks/use-products"
 
 type Props = {
   product: Product
@@ -19,6 +21,8 @@ const ProductCard = ({ product }: Props) => {
     createdAt,
     warranty,
   } = product
+
+  const { setSelectedProduct } = useStore(useProducts)
 
   const defineTag = () => {
     if (discount) {
@@ -49,17 +53,17 @@ const ProductCard = ({ product }: Props) => {
   }
 
   return (
-    <div className="flex flex-col text-center justify-center items-center  min-w-[35%]">
-      <div className="w-full p-2 bg-background-extra grid grid-rows-3 h-full">
+    <div className="flex flex-col text-center justify-center items-center  min-w-[35%]" onClick={() => setSelectedProduct(product)}>
+      <div className="w-full p-2 bg-background-extra grid grid-rows-3 h-full min-h-[11rem] max-h-[11rem]">
         <div className="flex flex-row justify-between row-span-full">
           <div>{defineTag()}</div>
           <div className="">
             <Image
               src="/images/icons/heart.svg"
-              width={10}
-              height={10}
+              width={15}
+              height={15}
               alt="heart like"
-              className="rounded-full border-text-extra border p-1.5 "
+              className="border border-text-extra w-5 h-5 p-1 rounded-full "
             />
           </div>
         </div>
@@ -81,11 +85,15 @@ const ProductCard = ({ product }: Props) => {
           <p className="text-4xs">Add to cart</p>
         </div>
       </div>
-      <div>
-        <h3>{abbreviation}</h3>
-        <div>
-          <h2>{formatPrice(price)}</h2>
-          <h2>{formatPrice(oldPrice)}</h2>
+      <div className="flex flex-col text-text-secondary text-center justify-center items-center py-2">
+        <h3 className="text-xs font-normal whitespace-nowrap">
+          {abbreviation}
+        </h3>
+        <div className="font-medium flex flex-row gap-2 text-center items-center">
+          <h1 className="text-xs font-bold">{formatPrice(price)}</h1>
+          <h2 className="text-2xs text-text-extra line-through font-bold">
+            {formatPrice(oldPrice)}
+          </h2>
         </div>
       </div>
     </div>

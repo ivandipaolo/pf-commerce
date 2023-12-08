@@ -31,6 +31,10 @@
   }
 }
 
+.swiper-pagination-bullet-active {
+  @apply bg-primary !important;
+}
+
 @keyframes expandUnderline {
   from {
     max-width: 0%;
