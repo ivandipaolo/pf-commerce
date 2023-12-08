@@ -14,10 +14,12 @@ import "swiper/css"
 import "swiper/css/pagination"
 
 const RelatedProducts = ({ category, subCategory }: Props) => {
-  const { products, relatedProducts } = useStore(useProducts)
+  const { relatedProducts } = useStore(useProducts)
   return (
     <MaxWidthWrapper className="flex flex-col gap-2 py-4">
-      <h2 className="text-lg font-medium text-center">Related Products</h2>
+      <h2 className="text-lg font-medium text-center lg:text-4xl lg:py-5">
+        Related Products
+      </h2>
       <div className="flex flex-row gap-5 w-full ">
         <Swiper
           slidesPerView={2}
@@ -27,7 +29,13 @@ const RelatedProducts = ({ category, subCategory }: Props) => {
             bulletActiveClass: "swiper-pagination-bullet-active",
           }}
           modules={[Pagination]}
-          className="h-fit min-h-fit"
+          className="h-fit min-h-fit lg:min-h-[30rem] lg:w-3/4"
+          breakpoints={{
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 0,
+            },
+          }}
         >
           {relatedProducts.map((product) => (
             <SwiperSlide key={product.model} className="mb-5">

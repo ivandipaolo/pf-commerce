@@ -19,30 +19,30 @@ const ProductDetails = ({ product }: Props) => {
   return (
     <div className="py-3">
       <MaxWidthWrapper className="">
-        <div className="flex flex-row font-medium text-xs justify-evenly">
+        <div className="flex flex-row font-medium text-xs justify-evenly lg:mt-20">
           <button
-            className={cn(getUnderlineClass("description"), "relative")}
+            className={cn(getUnderlineClass("description"), "relative lg:text-2xl")}
             onClick={() => setSelectedView("description")}
           >
             Description
           </button>
           <button
-            className={cn(getUnderlineClass("specifications"), "relative")}
+            className={cn(getUnderlineClass("specifications"), "relative lg:text-2xl")}
             onClick={() => setSelectedView("specifications")}
           >
             Specification
           </button>
           <button
-            className={cn(getUnderlineClass("reviews"), "relative")}
+            className={cn(getUnderlineClass("reviews"), "relative lg:text-2xl")}
             onClick={() => setSelectedView("reviews")}
           >
             Reviews
           </button>
         </div>
-        <div className="font-light text-2xs min-h-[7rem] max-h-[7rem]">
+        <div className="font-light text-2xs lg:text-lg min-h-[7rem] max-h-[7rem] lg:mt-10">
           {selectedView === "description" && (
             <div className="py-3">
-              <div className="text-2xs">
+              <div className="">
                 {product.description.length > 500 ? (
                   <>
                     {product.description.substring(0, 500)}
@@ -56,7 +56,7 @@ const ProductDetails = ({ product }: Props) => {
           )}
           {selectedView === "specifications" && (
             <div className="py-3">
-              <div className="text-2xs">
+              <div className="">
                 {product.specifications.length > 500 ? (
                   <>
                     {product.specifications.substring(0, 500)}
@@ -70,7 +70,7 @@ const ProductDetails = ({ product }: Props) => {
           )}
           {selectedView === "reviews" && (
             <div className="py-3">
-              <div className="text-2xs">
+              <div className="">
                 {product.reviews.length > 500 ? (
                   <>
                     {product.reviews.substring(0, 500)}

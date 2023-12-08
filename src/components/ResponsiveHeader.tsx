@@ -2,9 +2,9 @@ import Image from "next/image"
 
 import { MaxWidthWrapper } from "@/components"
 
-export const Header = () => {
+export const ResponsiveHeader = () => {
   return (
-    <MaxWidthWrapper className="grid grid-cols-3 w-full items-center mt-8">
+    <MaxWidthWrapper className="grid grid-cols-3 w-full items-center mt-8 lg:hidden">
       <div className="bg-primary h-10 w-10 max-w-[2.5rem] flex justify-center items-center basis-1/4">
         <Image
           src="/images/icons/burgermenu.svg"
