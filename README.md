@@ -1,36 +1,257 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">📱️ Needus. - Product Page 💻️</h1>
+
+<p align="center">
+  A product page created for demostrating skills on ecommerce frontend development
+</p>
+
+<h3 align="center">
+  <a href="https://pf-commerce.vercel.app/">Live Version Here</a>
+</h3>
+
+## Table of Contents
+
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Running the App](#running-the-app)
+- [Folder Structure](#folder-structure)
+
+## Tech Stack
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
 
 ## Getting Started
 
-First, run the development server:
+### Installation and usage
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+#### For development:
+
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/ivandipaolo/pf-commerce.git
+   ```
+   
+2. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Run dev server
+(Default port 3000)
+   ```bash
+   npm run dev
+   ```
+
+4. Open and start developing
+
+   ```bash
+   localhost:3000
+   ```
+
+#### For deployment:
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/ivandipaolo/pf-commerce.git
+   ```
+   
+2. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Create build
+
+   ```bash
+   npm run build
+   ```
+
+4. Run preview server
+(Default port 3000)
+   ```bash
+   npm start
+   ```
+
+5. Open preview
+
+   ```bash
+   localhost:3000
+   ```
+
+
+## Folders structure:
+<details>
+  <summary>Complete</summary>
+  
+```
+└── 📁pf-ecommerce
+    └── .eslintrc.json
+    └── next-env.d.ts
+    └── next.config.js
+    └── package-lock.json
+    └── package.json
+    └── postcss.config.js
+    └── 📁public
+        └── 📁images
+            └── 📁icons
+                └── arrowdown.svg
+                └── burgermenu.svg
+                └── cart.svg
+                └── contact.svg
+                └── heart.svg
+                └── likes.svg
+                └── location.svg
+                └── menulist.svg
+                └── mobile.svg
+                └── search.svg
+                └── star.svg
+                └── user.svg
+            └── newsletter.webp
+            └── 📁products
+                └── 📁LaptopX
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+                └── 📁LED55A1C
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+                └── 📁LED65B1U
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+                └── 📁OLED42C2PSA
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+                └── 📁OLED55D1TA
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+                └── 📁QLED55A2TA
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+                └── 📁QLED65Q90TA
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+                └── 📁SmartSpeaker
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+                └── 📁UHD50X
+                    └── 1.png
+                    └── 2.png
+                    └── 3.png
+                    └── 4.png
+    └── README.md
+    └── 📁src
+        └── 📁app
+            └── favicon.ico
+            └── globals.css
+            └── page.tsx
+        └── 📁components
+            └── CategoryTitle.tsx
+            └── DesktopHeader.tsx
+            └── Footer.tsx
+            └── Heading.tsx
+            └── index.ts
+            └── MaxWidthWrapper.tsx
+            └── Navbar.tsx
+            └── Newsletter.tsx
+            └── 📁product
+                └── HorizontalImages.tsx
+                └── index.ts
+                └── PriceCard.tsx
+                └── ProductCard.tsx
+                └── ProductDescription.tsx
+                └── ProductDetails.tsx
+                └── ProductImages.tsx
+                └── RelatedProducts.tsx
+                └── VerticalImages.tsx
+            └── ProductPage.tsx
+            └── ResponsiveHeader.tsx
+            └── 📁ui
+                └── Counter.tsx
+                └── DropdownMenu.tsx
+                └── index.ts
+        └── 📁hooks
+            └── index.ts
+            └── use-products.ts
+        └── 📁lib
+            └── 📁data
+                └── index.ts
+                └── products.ts
+            └── index.ts
+            └── utils.ts
+        └── 📁types
+            └── index.ts
+    └── tailwind.config.ts
+    └── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</details>
+<details>
+  <summary>Abbreviated</summary>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+└── 📁src
+    └── 📁app
+        └── favicon.ico
+        └── globals.css
+        └── page.tsx
+    └── 📁components
+        └── CategoryTitle.tsx
+        └── DesktopHeader.tsx
+        └── Footer.tsx
+        └── Heading.tsx
+        └── index.ts
+        └── MaxWidthWrapper.tsx
+        └── Navbar.tsx
+        └── Newsletter.tsx
+        └── 📁product
+            └── HorizontalImages.tsx
+            └── index.ts
+            └── PriceCard.tsx
+            └── ProductCard.tsx
+            └── ProductDescription.tsx
+            └── ProductDetails.tsx
+            └── ProductImages.tsx
+            └── RelatedProducts.tsx
+            └── VerticalImages.tsx
+        └── ProductPage.tsx
+        └── ResponsiveHeader.tsx
+        └── 📁ui
+            └── Counter.tsx
+            └── DropdownMenu.tsx
+            └── index.ts
+    └── 📁hooks
+        └── index.ts
+        └── use-products.ts
+    └── 📁lib
+        └── 📁data
+            └── index.ts
+            └── products.ts
+        └── index.ts
+        └── utils.ts
+    └── 📁types
+        └── index.ts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+</details>
