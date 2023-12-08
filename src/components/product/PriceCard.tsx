@@ -8,7 +8,7 @@ type Props = {
 
 export const PriceCard = ({ product }: Props) => {
   return (
-    <div className="shadow-md">
+    <div className="shadow-md lg:shadow-none">
       {/* Todo: Add shadow to the top too */}
       <MaxWidthWrapper className="py-3 flex flex-col gap-1 ">
         <p className="font-light text-2xs lg:text-base lg:font-normal">
@@ -31,11 +31,11 @@ export const PriceCard = ({ product }: Props) => {
         </div>
         <div className="grid grid-cols-4 items-start justify-start h-fit">
           <Counter className="flex lg:hidden col-span-1" />
-          <div className="flex flex-row lg:w-full items-center text-center justify-center gap-3 w-full h-full col-span-3 lg:justify-between lg:">
-            <button className="bg-primary text-white border border-primary  font-medium text-sm px-6 py-1 h-full lg:text-lg lg:px-14 lg:py-4">
+          <div className="flex flex-row lg:w-full items-center text-center justify-center gap-3 w-full h-full col-span-3 lg:justify-between">
+            <button className="bg-primary text-white border border-primary  lg:whitespace-nowrap	 font-medium text-sm px-6 py-1 h-full lg:text-lg lg:px-14 lg:py-4">
               Buy Now
             </button>
-            <button className="bg-white text-primary border border-primary font-medium text-sm px-6 py-1 h-full lg:text-lg lg:px-14 lg:py-4">
+            <button className="bg-white text-primary border border-primary lg:whitespace-nowrap	 font-medium text-sm px-6 py-1 h-full lg:text-lg lg:px-14 lg:py-4">
               Add to Cart
             </button>
           </div>
