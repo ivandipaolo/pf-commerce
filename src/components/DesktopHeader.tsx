@@ -11,7 +11,7 @@ export const DesktopHeader = () => {
           Needus<span className="text-primary">.</span>
         </h1>
       </div>
-      <div className="grid grid-cols-2 border border-border-secondary p-2 pl-10 basis-3/4">
+      <div className="grid grid-cols-2 grid-rows-1 border border-border-secondary p-2 pl-10 basis-3/4">
         <div className="flex flex-row items-center justify-between relative text-center border-r border-border-secondary ">
           <input
             type="text"
@@ -27,7 +27,7 @@ export const DesktopHeader = () => {
           />
           {/* Todo: Modify svg */}
         </div>
-        <div className="  text-text-secondary text-xl flex flex-row justify-between items-center text-center p-1 px-6 w-full">
+        <div className="text-text-secondary text-xl flex flex-row justify-between items-center text-center p-1 px-6 w-full">
           <DropdownMenu
             options={["Category 1", "Category 2", "Category 3", "Category 4", "Category 5"]}
             title="All Categories"

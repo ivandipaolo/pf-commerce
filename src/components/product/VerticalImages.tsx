@@ -32,7 +32,7 @@ const VerticalImages = ({
         direction="vertical"
         slidesPerView={3}
         spaceBetween={10}
-        width={265}
+        width={200}
         pagination={{
           clickable: true,
           bulletClass: "hidden",
@@ -43,12 +43,12 @@ const VerticalImages = ({
           <SwiperSlide
             key={index}
             className={cn(
-              "py-4 bg-white border  border-gray-200 flex justify-center items-center max-h-[120px]",
+              "py-4 lg:px-4 bg-white border  border-gray-200 flex justify-center items-center max-h-[120px]",
               selectedImage === src && "border-primary"
             )}
           >
             <div
-              className="flex relative justify-center items-center  h-full"
+              className="flex relative justify-center items-center h-full"
               onClick={() => setSelectedImage(src)}
             >
               <Image

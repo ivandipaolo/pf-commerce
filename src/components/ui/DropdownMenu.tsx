@@ -31,7 +31,7 @@ const DropdownMenu = ({
 
   return (
     <div
-      className={className}
+      className={cn(className, '')}
       style={{ position: "relative" }}
       ref={dropdownRef}
     >
@@ -39,7 +39,7 @@ const DropdownMenu = ({
         id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
         className={cn(
-          "text-text-secondary bg-transparent font-light rounded-lg text-2xl px-5 py-2.5 text-center inline-flex items-center",
+          "md:text-xl text-text-secondary bg-transparent font-light rounded-lg text-2xl px-2 py-2.5 text-center inline-flex items-center",
           titleClassName
         )}
         type="button"

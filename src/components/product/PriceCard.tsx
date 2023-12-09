@@ -29,7 +29,7 @@ export const PriceCard = ({ product }: Props) => {
             numberClassName="text-3xl px-5 flex items-center justify-center w-full h-full"
           />
         </div>
-        <div className="grid grid-cols-4 items-start justify-start h-fit">
+        <div className="grid grid-cols-4 grid-rows-1 items-start justify-start h-fit">
           <Counter className="flex lg:hidden col-span-1" />
           <div className="flex flex-row lg:w-full items-center text-center justify-center gap-3 w-full h-full col-span-3 lg:justify-between">
             <button className="bg-primary text-white border border-primary  lg:whitespace-nowrap	 font-medium text-sm px-6 py-1 h-full lg:text-lg lg:px-14 lg:py-4">

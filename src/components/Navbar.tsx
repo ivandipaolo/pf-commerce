@@ -39,7 +39,7 @@ export const Navbar = () => {
   ]
   return (
     <div className="w-full bg-background-secondary hidden flex-row lg:flex text-white ">
-      <div className="bg-primary basis-1/4 px-12 flex flex-row items-center justify-center text-center gap-6 min-h-full py-7">
+      <div className="bg-primary basis-1/4 px-7 flex flex-row items-center justify-center text-center gap-6 min-h-full py-7">
         <Image
           src="/images/icons/menulist.svg"
           alt="search"
@@ -47,7 +47,7 @@ export const Navbar = () => {
           height={20}
           className="w-8"
         />
-        <h2 className="font-medium text-2xl">All Categories</h2>
+        <h2 className="font-medium text-2xl md:text-lg w-auto lg:whitespace-nowrap">All Categories</h2>
         <svg
           className="w-4 h-4 ms-3 text-white"
           aria-hidden="true"
