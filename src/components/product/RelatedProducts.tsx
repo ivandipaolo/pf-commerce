@@ -33,7 +33,7 @@ const RelatedProducts = ({ category, subCategory }: Props) => {
           breakpoints={{
             1024: {
               slidesPerView: 4,
-              spaceBetween: 0,
+              spaceBetween: 20,
             },
           }}
         >

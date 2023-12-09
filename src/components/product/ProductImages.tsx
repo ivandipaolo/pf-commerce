@@ -24,7 +24,7 @@ const ProductImages = ({
       <div className="w-full">
         <div className="block lg:flex flex-row  lg:items-center">
           <VerticalImages
-            className="lg:block hidden px-10 relative basis-1/3"
+            className="lg:block hidden relative basis-1/3"
             setSelectedImage={setSelectedImage}
             srcList={images}
             productModel={model}
